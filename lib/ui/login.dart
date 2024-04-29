@@ -1,4 +1,5 @@
 import 'package:ecommerce_firebase/const/colors.dart';
+import 'package:ecommerce_firebase/ui/bottom_navbar.dart';
 import 'package:ecommerce_firebase/ui/sign_up.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LoginScreen(
+    return const LoginScreen(
       text1: 'Sign In',
       text2: 'Welcome Back',
       text3: 'Glad to see back my buddy!!',
@@ -51,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => Container(),
+              builder: (context) => BottomNavbar(),
             ));
       } else {
         print('something went wrong');
